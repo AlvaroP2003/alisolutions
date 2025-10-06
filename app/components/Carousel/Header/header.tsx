@@ -3,7 +3,6 @@ import Link from "next/link"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import ToggleTheme from "../../ThemeToggle/themeToggle"
 import Hamburger from "hamburger-react";
 
 export default function Header() {
