@@ -16,11 +16,11 @@ export default function Home() {
   const [showOverlay,setShowOverlay] = useState(false)
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
         <Header 
           showOverlay={showOverlay}
           setShowOverlay={setShowOverlay}/>
-        <main className="relative px-7.5 lg:px-50">
+        <main className="px-7.5 lg:px-50">
           <Hero/>
           <Carousel/>
           <About/>

@@ -39,7 +39,7 @@ const timelineData = [
 
     return (
         <section id="education" className="h-[100vh] flex flex-col justify-center mb-[10vh]">
-            <h2 className="text-neutral-100 text-3xl mb-4">Education</h2>
+            <h2 className="text-neutral-100 text-2xl font-bold mb-2">Education</h2>
             <p className="text-neutral-400">Throughout my educational journey, I’ve cultivated a strong foundation in technology and problem-solving. From completing my Matric at Curro Nelspruit to diving deep into Information Technology at CTU Training Solutions, and further honing my skills in Software Development at Codespace Academy, I’ve continuously sought opportunities to learn, innovate, and grow. Each experience has shaped my technical expertise and fueled my passion for creating solutions that make a real impact</p>
 
 

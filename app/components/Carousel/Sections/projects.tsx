@@ -23,6 +23,8 @@ import {
 
 export default function Projects() {
 
+
+
    const projectsData = [
     {
         title: 'Cliqserve Business Companions',
@@ -57,7 +59,7 @@ export default function Projects() {
 
     return (
         <section id="projects" className="relative mb-[10vh]">
-            <h2 className="text-neutral-100 text-4xl font-bold mb-2">Projects</h2>
+            <h2 className="text-neutral-100 text-2xl font-bold mb-2">Projects</h2>
             <p className="text-neutral-400 my-5">Here’s a selection of my recent work—projects that showcase my skills, creativity, and passion for building practical, high-quality solutions. Each project reflects my focus on clean, efficient code and user-friendly design, whether it’s a sleek web app, a responsive website, or a unique digital experience. Take a look and see how I bring ideas to life in the real world.</p>
 
 
@@ -65,7 +67,7 @@ export default function Projects() {
                         {projectsData.map((project, index) => (
                         <div
                             key={index}
-                            className="relative backdrop-blur-2xl bg-neutral-900/40 w-[100%] h-[350px] lg:w-[49%] lg:h-[470px] rounded-lg p-4 border border-neutral-800 hover:bg-neutral-900 transition-all cursor-pointer"
+                            className="backdrop-blur-2xl bg-neutral-900/40 w-[100%] h-[350px] lg:w-[49%] lg:h-[470px] rounded-lg p-4 border border-neutral-800 hover:bg-neutral-900 transition-all cursor-pointer"
                         >
                             <div className="relative w-full h-[50%] lg:h-[70%] overflow-hidden rounded-lg mb-4">
                                 <Image
@@ -73,15 +75,16 @@ export default function Projects() {
                                     alt={project.title}
                                     fill
                                     className="object-cover"
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
                                 />
-                                {project.tag ?
-                                <div className="absolute bottom-3 right-4 
-                                                bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-600 
-                                                px-4 py-2 rounded-full text-xs text-white shadow-md
-                                                ">
-                                {project.tag}
-                                </div>
-                                : ''}
+                               {project.tag && (
+                                    <div className="absolute bottom-3 right-4
+                                                    px-4 py-1 rounded-full text-xs font-medium text-white
+                                                    bg-gradient-to-r from-emerald-500 to-emerald-700
+                                                    shadow-sm">
+                                        {project.tag}
+                                    </div>
+                                    )}
                             </div>
                             <div className="flex flex-col">
                                     <h3 className="text-neutral-50 lg:text-lg lg:font-bold mb-2.5">{project.title}</h3>
