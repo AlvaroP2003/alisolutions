@@ -35,11 +35,7 @@ export default function BasicInfo() {
       {/* About Me */}
       <h2 className="text-neutral-100 text-2xl font-bold mb-2">About Me</h2>
       <p className="text-neutral-400 mb-3">
-        Hi, I'm Alvaro Placido. I’m a software developer who loves writing clean, scalable code
-        that actually solves problems. I enjoy diving into modern technologies and frameworks,
-        but what really drives me is helping local businesses grow and thrive online. From
-        building custom web apps to designing smooth, user-friendly interfaces, I focus on
-        creating solutions that make a real difference for the people and communities I work with.
+       Hi, I’m Alvaro Placido — a software developer who loves turning ideas into clean, functional, and good-looking digital experiences. I build modern websites and web apps that don’t just work well, but actually make life easier for the people using them. I’m especially passionate about helping local businesses grow online — whether that means crafting a custom web app, building a sleek website, or fine-tuning a user interface that feels effortless. I like to keep things practical, creative, and fun — because great tech should feel that way too.
       </p>
 
       {/* About Me Details */}

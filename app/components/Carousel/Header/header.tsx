@@ -12,10 +12,10 @@ export default function Header({showOverlay,setShowOverlay}: HeaderProps) {
   const [showMenu, setShowMenu] = useState(false)
 
   const headerData = [
-    { title: 'My Story', link: 'about' },
+    { title: 'About Me', link: 'about' },
     { title: 'Projects', link: 'projects' },
     { title: 'Education', link: 'education' },
-    { title: 'Contact Me', link: 'contact' }
+    { title: 'Contact', link: 'contact' }
   ];
 
   const toggleMenu = () => {
@@ -33,7 +33,7 @@ export default function Header({showOverlay,setShowOverlay}: HeaderProps) {
                   alt="Logo"
                   fill
                   className="object-contain"
-                   sizes="(max-width: 1024px) 2.5rem, 7rem"
+                  sizes="(max-width: 1024px) 2.5rem, 7rem"
                 />
               </Link>
 

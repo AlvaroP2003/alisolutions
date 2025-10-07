@@ -3,20 +3,20 @@ import { SiLinkedin, SiWhatsapp } from "react-icons/si";
 import Image from "next/image";
 
 const socialsData = [
-  {
-    icon: SiWhatsapp,
-    content: "WhatsApp",
-    href: "https://wa.me/yourphonenumber", // use your full phone number with country code
-  },
+    {
+      icon: SiWhatsapp,
+      content: "WhatsApp",
+      href: "https://wa.me/27658135441",
+    },
    {
     icon: MdEmail,
     content: "Email",
-    href: "mailto:youremail@example.com",
+    href: "mailto:alvaroplacido@alisolutions.co.za",
   },
   {
     icon: SiLinkedin,
     content: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/alvaro-placido-226887206/",
   },
 ];
 

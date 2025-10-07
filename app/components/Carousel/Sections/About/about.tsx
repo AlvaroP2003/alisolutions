@@ -18,9 +18,9 @@ export default function MyStory() {
     return (
        <section id="about" className="relative flex items-center justify-center lg:h-[100vh] mb-[10vh]">
 
-          <div className="relative flex gap-5 flex-col lg:flex-row">
+          <div className="relative flex gap-5 flex-col items-center lg:flex-row">
             
-            <div className="relative w-full lg:w-[400px] h-[600px]">
+            <div className="relative w-[95%] lg:w-[400px] h-[600px]">
               <Image
                 className="main-img rounded-xl object-cover"
                 src="/about-me.webp"

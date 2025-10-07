@@ -11,7 +11,7 @@ export default function Hero() {
             <div className="h-0 w-[40rem] absolute top-[30%] right-[-5%] shadow-[0_0_900px_20px_#00C48C] -rotate-[30deg]"></div>
 
             <div className="z-10 text-center lg:text-start flex-1">
-              <h1 className="title text-4xl lg:text-8xl text-neutral-50 mb-1">Ali Solutions</h1>
+              <h1 className="title text-5xl lg:text-8xl text-neutral-50 mb-1">Ali Solutions</h1>
               <h2 className="subtitle text-xl lg:text-4xl mb-2 text-neutral-200">SOFTWARE DEVELOPER</h2> {/* Animate to swtich between different h2*/}
               {/* <h2 className="subtitle text-4xl mb-2 text-neutral-300">WEB DESIGNER</h2>
               <h2 className="subtitle text-4xl mb-2 text-neutral-300">CREATOR</h2>
