@@ -20,14 +20,15 @@ export default function MyStory() {
 
           <div className="relative flex gap-5 flex-col lg:flex-row">
             
-
-            <Image
-              className="main-img rounded-xl object-cover"
-              src="/about-me.webp"
-              alt="Alvaro Placido"
-              width={400}
-              height={600}
-            />
+            <div className="relative w-full lg:w-[400px] h-[600px]">
+              <Image
+                className="main-img rounded-xl object-cover"
+                src="/about-me.webp"
+                alt="Alvaro Placido"
+                fill
+              />
+            </div>
+          
 
             <div className="relative content">
               <div className="flex gap-2.5 lg:gap-5 mb-4 justify-center">

@@ -1,9 +1,14 @@
 
+interface OverlayProps {
+  showOverlay: boolean;
+}
 
 
-export default function Overlay() {
+export default function Overlay({showOverlay}:OverlayProps) {
     return (
-        <div className="aboslute inset-0 fixed backdrop-blur-sm z-40 bg-black/20">
-        </div>
+       <div
+            className={`inset-0 fixed z-40 bg-black/20 backdrop-blur-sm transition-all duration-200
+                ${showOverlay ? 'opacity-100' : 'opacity-0'}`}
+            ></div>
     )
 }

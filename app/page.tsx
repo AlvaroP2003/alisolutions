@@ -12,7 +12,6 @@ import Overlay from "./components/Overlay/overlay";
 
 
 export default function Home() {
-
   const [showOverlay,setShowOverlay] = useState(false)
 
   return (
@@ -27,7 +26,7 @@ export default function Home() {
           <Projects/>
           <Education/>
           <Contact/> 
-          {showOverlay ? <Overlay/> : null}
+          <Overlay showOverlay={showOverlay}/>
         </main>
     </div>
   );

@@ -3,7 +3,12 @@ import Link from "next/link"
 import Hamburger from "hamburger-react";
 import { useState } from "react"
 
-export default function Header({showOverlay,setShowOverlay}) {
+interface HeaderProps {
+  showOverlay: boolean;
+  setShowOverlay: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function Header({showOverlay,setShowOverlay}: HeaderProps) {
   const [showMenu, setShowMenu] = useState(false)
 
   const headerData = [
@@ -45,7 +50,7 @@ export default function Header({showOverlay,setShowOverlay}) {
               <button 
                 onClick={() => toggleMenu()}
                 className="text-neutral-50 block lg:hidden bg-neutral-900 border border-neutral-800 rounded-lg">
-                <Hamburger size={20}/>
+                <Hamburger toggled={showMenu} size={20}/>
               </button>
 
               
@@ -54,7 +59,13 @@ export default function Header({showOverlay,setShowOverlay}) {
                 <ul className="flex flex-col gap-5 text-neutral-200">
                     {headerData.map((item,index) => (
                       <li key={index}>
-                        <Link href={item.link}>{item.title}</Link>
+                        <Link
+                          onClick={() => {
+                            setShowOverlay(false)
+                            setShowMenu(false)
+                          }
+                          }
+                          href={`#${item.link}`}>{item.title}</Link>
                       </li>
                     ))}
                 </ul>
