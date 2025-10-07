@@ -1,18 +1,23 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Hamburger from "hamburger-react";
+import { useState } from "react"
 
-export default function Header() {
+export default function Header({showOverlay,setShowOverlay}) {
+  const [showMenu, setShowMenu] = useState(false)
 
-const headerData = [
-  { title: 'MY STORY', link: 'about' },
-  { title: 'PROJECTS', link: 'projects' },
-  { title: 'EDUCATION', link: 'education' },
-  { title: 'CONTACT ME', link: 'contact' }
-];
+  const headerData = [
+    { title: 'My Story', link: 'about' },
+    { title: 'Projects', link: 'projects' },
+    { title: 'Education', link: 'education' },
+    { title: 'Contact Me', link: 'contact' }
+  ];
+
+  const toggleMenu = () => {
+      setShowOverlay(!showOverlay)
+      setShowMenu(!showMenu)
+  }
+
 
     return (
         <header className="h-[10vh] flex items-center justify-between sticky top-0 px-5 lg:px-10 z-50">
@@ -29,7 +34,7 @@ const headerData = [
                     <ul className="flex">
                       {headerData.map((item,index) => (
                         <li key={index} className="flex">
-                        <Link  href={`#${item.link}`} className="header-items text-sm px-10 py-3 text-neutral-200 hover:bg-neutral-800 hover:text-white cursor-pointer transition-all rounded-full">
+                        <Link  href={`#${item.link}`} className="header-items px-10 py-3 text-neutral-200 hover:bg-neutral-800 hover:text-white cursor-pointer transition-all rounded-full">
                             {item.title}
                         </Link>
                         </li>
@@ -37,9 +42,25 @@ const headerData = [
                     </ul>
                   </nav>
 
-              <div className="text-neutral-50 block lg:hidden bg-neutral-900 border border-neutral-800 rounded-lg">
+              <button 
+                onClick={() => toggleMenu()}
+                className="text-neutral-50 block lg:hidden bg-neutral-900 border border-neutral-800 rounded-lg">
                 <Hamburger size={20}/>
-              </div>
+              </button>
+
+              
+              {showMenu ?
+              <div className="absolute right-5 top-20 bg-neutral-900/70 backdrop-blur-2xl border border-neutral-800 p-5 w-[250px] rounded-lg z-50">
+                <ul className="flex flex-col gap-5 text-neutral-200">
+                    {headerData.map((item,index) => (
+                      <li key={index}>
+                        <Link href={item.link}>{item.title}</Link>
+                      </li>
+                    ))}
+                </ul>
+              </div> 
+              : null
+                  }
                   
          </header>
     )

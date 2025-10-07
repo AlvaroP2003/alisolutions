@@ -7,21 +7,28 @@ import About from "./components/Carousel/Sections/About/about";
 import Projects from "./components/Carousel/Sections/projects";
 import Education from "./components/Carousel/Sections/education";
 import Contact from "./components/Carousel/Sections/contact";
+import { useState } from "react";
+import Overlay from "./components/Overlay/overlay";
 
 
 export default function Home() {
 
+  const [showOverlay,setShowOverlay] = useState(false)
+
   return (
-    <main >
-        <Header/>
-        <div className="relative px-7.5 lg:px-70">
+    <div className="relative">
+        <Header 
+          showOverlay={showOverlay}
+          setShowOverlay={setShowOverlay}/>
+        <main className="relative px-7.5 lg:px-50">
           <Hero/>
           <Carousel/>
           <About/>
           <Projects/>
           <Education/>
           <Contact/> 
-        </div>
-    </main>
+          {showOverlay ? <Overlay/> : null}
+        </main>
+    </div>
   );
 }

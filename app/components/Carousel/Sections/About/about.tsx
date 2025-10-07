@@ -16,10 +16,11 @@ export default function MyStory() {
 
 
     return (
-       <section id="about" className="relative flex items-center justify-center h-[100vh] mb-[10vh]">
+       <section id="about" className="relative flex items-center justify-center lg:h-[100vh] mb-[10vh]">
 
           <div className="relative flex gap-5 flex-col lg:flex-row">
-            {/* Image */}
+            
+
             <Image
               className="main-img rounded-xl object-cover"
               src="/about-me.webp"
@@ -29,9 +30,9 @@ export default function MyStory() {
             />
 
             <div className="relative content">
-              <div className="flex gap-5 mb-4">
+              <div className="flex gap-2.5 lg:gap-5 mb-4 justify-center">
                 <button
-                  className={`cursor-pointer w-[200px] h-[40px] ${
+                  className={`cursor-pointer w-[170px] lg:w-[200px] h-[40px] ${
                     activeTab === ActiveTab.Info ? 'bg-neutral-900 rounded-full text-white border border-neutral-800' : 'text-neutral-400 hover:text-neutral-100'
                   }`}
                   onClick={() => setActiveTab(ActiveTab.Info)}
@@ -39,7 +40,7 @@ export default function MyStory() {
                   Basic Info
                 </button>
                 <button
-                  className={`cursor-pointer w-[200px] h-[40px] ${
+                  className={`cursor-pointer w-[170px] lg:w-[200px] h-[40px] ${
                     activeTab === ActiveTab.Stack ? 'bg-neutral-900 rounded-full text-white border border-neutral-800' : 'text-neutral-400 hover:text-neutral-100'
                   }`}
                   onClick={() => setActiveTab(ActiveTab.Stack)}
@@ -48,12 +49,24 @@ export default function MyStory() {
                 </button>
               </div>
 
-              <div className="container relative w-[600px] h-full overflow-hidden">
-                <div className={`absolute ${activeTab == ActiveTab.Info ? 'left-0' : 'left-[-600px]'} top-0 wrapper flex w-fit transition-all`}>
-                 <BasicInfo/>
-                 <TechStack/>
+             <div className="relative w-[400px] lg:w-[600px] overflow-hidden">
+               <div
+                  className="flex transition-transform duration-100 ease-in-out"
+                  style={{
+                    transform:
+                      activeTab === ActiveTab.Info
+                        ? 'translateX(0)'
+                        : `translateX(-${typeof window !== 'undefined' && window.innerWidth >= 1024 ? 600 : 400}px)`,
+                  }}
+                >
+                <div className="w-[600px]">
+                  <BasicInfo />
+                </div>
+                <div className="w-[600px]">
+                  <TechStack />
                 </div>
               </div>
+            </div>
             
             </div>
 

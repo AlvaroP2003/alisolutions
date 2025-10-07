@@ -21,7 +21,7 @@ export default function TechStack() {
   ];
 
   return (
-    <div className="p-4 rounded w-[600px]">
+    <div className="p-4 rounded  w-[400px] lg:w-[600px]">
       <h2 className="text-neutral-200 text-2xl font-bold mb-4">Tech Stack</h2>
       {techStack.map((item, idx) => (
         <div key={idx} className="mb-4">
