@@ -1,14 +1,14 @@
 'use client'
 
-import Header from "./components/Carousel/Header/header";
-import Hero from "./components/Carousel/Sections/hero";
-import Carousel from "./components/Carousel/Carousel/carousel";
-import About from "./components/Carousel/Sections/About/about";
-import Projects from "./components/Carousel/Sections/projects";
-import Education from "./components/Carousel/Sections/education";
-import Contact from "./components/Carousel/Sections/contact";
+import Header from "./Components/Header/header";
+import Hero from "./Components/Sections/hero";
+import Carousel from "./Components/Carousel/carousel";
+import AboutMe from "./Components/Sections/About/about";
+import Projects from "./Components/Sections/projects";
+import Education from "./Components/Sections/education";
+import Contact from "./Components/Sections/contact";
 import { useState } from "react";
-import Overlay from "./components/Overlay/overlay";
+import Overlay from "./Components/Overlay/overlay";
 
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
         <main className="px-7.5 lg:px-50">
           <Hero/>
           <Carousel/>
-          <About/>
+          <AboutMe/>
           <Projects/>
           <Education/>
           <Contact/> 

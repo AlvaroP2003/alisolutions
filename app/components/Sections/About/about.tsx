@@ -1,8 +1,8 @@
 'use client'
 import Image from "next/image"
 import { useState } from "react"
-import BasicInfo from "./basic_info"
-import TechStack from "./tech_stack"
+import BasicInfo from "./basic-info"
+import TechStack from "./techs-stack"
 
 
 enum ActiveTab  {
@@ -10,7 +10,7 @@ enum ActiveTab  {
   Stack = 'stack'
 }
 
-export default function MyStory() {
+export default function AboutMe() {
 
   const [activeTab,setActiveTab] = useState<ActiveTab>(ActiveTab.Info)
 
