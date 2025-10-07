@@ -1,47 +1,7 @@
-
-import SplitText from "gsap/SplitText";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import Image from "next/image";
-import Spline from '@splinetool/react-spline/next';
 
 
 export default function Hero() {
-
-     useGSAP(() => {
-        const herosplit = new SplitText('.title', { type : 'chars,words'})
-        const paragraph = new SplitText('.subtitle', { type : 'lines'})
-    
-        herosplit.chars.forEach((char) => char.classList.add('text-gradient'))
-    
-        gsap.from(herosplit.chars, {
-          yPercent: 100,
-          duration: 1.8,
-          ease: 'expo.out',
-          stagger: 0.05
-        })
-    
-    
-        gsap.from(paragraph.lines, {
-          opacity:0,
-          yPercent: 100,
-          duration: 1.8,
-          ease: 'expo.out',
-          stagger: 0.06,
-          delay:1,
-        })
-    
-      },[])
-
-      useGSAP(() => {
-        gsap.to("feTurbulence", {
-          duration: 10,
-          repeat: -1,
-          ease: "none",
-          attr: { baseFrequency: "0.02 0.03" }
-        });
-      }, []);
-
 
     return (
         <section id='home' className="relative h-[85vh] flex lg:flex-row flex-col-reverse items-center">

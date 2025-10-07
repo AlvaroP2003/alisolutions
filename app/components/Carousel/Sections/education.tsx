@@ -43,37 +43,37 @@ const timelineData = [
             <p className="text-neutral-400">Throughout my educational journey, I’ve cultivated a strong foundation in technology and problem-solving. From completing my Matric at Curro Nelspruit to diving deep into Information Technology at CTU Training Solutions, and further honing my skills in Software Development at Codespace Academy, I’ve continuously sought opportunities to learn, innovate, and grow. Each experience has shaped my technical expertise and fueled my passion for creating solutions that make a real impact</p>
 
 
-            <div className="flex flex-col justify-between mt-20 h-[60vh] lg:px-20">
+            <div className="flex flex-col gap-6 mt-20 lg:px-20">
                 {timelineData.map((item,index) => (
-                    <div key={index} className="timeline-item relative flex justify-between">
-                        <div className="flex gap-5">
-                            <div className="relative h-[60px] w-[60px] lg:h-[90px] lg:w-[90px] rounded-full overflow-hidden hover:scale-110 transition-all cursor-pointer">
-                                <Image 
-                                 src={item.image}
-                                 alt={item.school}
-                                 fill
-                                 className="object-cover"
-                                />
+                    <div key={index} className="timeline-item backdrop-blur-sm bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all">
+                        <div className="flex justify-between items-start">
+                            <div className="flex gap-5">
+                                <div className="relative h-[60px] w-[60px] lg:h-[90px] lg:w-[90px] rounded-full overflow-hidden hover:scale-110 transition-all cursor-pointer flex-shrink-0">
+                                    <Image 
+                                     src={item.image}
+                                     alt={item.school}
+                                     fill
+                                     className="object-cover"
+                                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                                    />
+                                </div>
+
+                                <div className="flex flex-col">
+                                  <h3 className="text-neutral-200 lg:text-lg font-semibold">{item.subject}</h3>
+                                  <h4 className="text-neutral-300 text-sm lg:text-md mb-3">{item.school}</h4>
+                                  
+                                  <ul className="flex flex-col gap-1">
+                                      {item.tasks.map((task, taskIndex) => (
+                                          <li key={taskIndex} className="text-neutral-400 hover:text-neutral-200 cursor-pointer text-sm transition-all">
+                                            • {task}
+                                          </li>
+                                      ))}
+                                  </ul>
+                                </div>
                             </div>
 
-                            <div>
-                              <h3 className="text-neutral-200 lg:text-lg">{item.subject}</h3>
-                              <h4 className="text-neutral-400 text-sm lg:text-md">{item.school}</h4>
-                            </div>
-
-                            <div className="timeline-info absolute w-[225px] bg-neutral-950 border border-neutral-800 hover:border-neutral-600 transition-all flex flex-col px-7 py-5 gap-2.5 rounded-lg -left-[250px]">
-                              <ul className="text-end flex flex-col gap-1">
-                                  {item.tasks.map((i,index) => (
-                                      <li key={index} className="text-neutral-400 hover:text-neutral-50 cursor-pointer text-sm transition-all">
-                                        {i}
-                                      </li>
-                                  ))}
-                                </ul>
-                            </div>
-                            
+                            <div className="text-neutral-400 text-sm lg:text-base font-medium">{item.duration}</div>
                         </div>
-
-                        <div className="text-neutral-400 text-sm lg:text-base">{item.duration}</div>
                     </div>
                 ))}
             </div>

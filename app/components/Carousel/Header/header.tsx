@@ -25,7 +25,7 @@ export default function Header({showOverlay,setShowOverlay}: HeaderProps) {
 
 
     return (
-        <header className="h-[10vh] flex items-center justify-between sticky top-0 px-5 lg:px-10 z-50">
+        <header className="h-[12vh] flex items-center justify-between sticky top-0 px-5 lg:px-15 z-50">
               <Link href='#home' className="hover:scale-105 scale-60 lg:scale-100 transition-all">
                 <Image
                     src="/logo-white.png"
@@ -39,7 +39,7 @@ export default function Header({showOverlay,setShowOverlay}: HeaderProps) {
                     <ul className="flex">
                       {headerData.map((item,index) => (
                         <li key={index} className="flex">
-                        <Link  href={`#${item.link}`} className="header-items px-10 py-3 text-neutral-200 hover:bg-neutral-800 hover:text-white cursor-pointer transition-all rounded-full">
+                        <Link  href={`#${item.link}`} className="header-items px-10 py-2 text-neutral-200 hover:bg-neutral-800 hover:text-white cursor-pointer transition-all rounded-full">
                             {item.title}
                         </Link>
                         </li>

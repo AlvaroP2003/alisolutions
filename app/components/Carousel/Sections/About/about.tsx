@@ -26,6 +26,7 @@ export default function MyStory() {
                 src="/about-me.webp"
                 alt="Alvaro Placido"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
               />
             </div>
           
