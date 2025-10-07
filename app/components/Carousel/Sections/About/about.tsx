@@ -17,10 +17,11 @@ export default function MyStory() {
 
     return (
        <section id="about" className="relative flex items-center justify-center h-[100vh] mb-[10vh]">
-          <div className="flex gap-10 flex-col lg:flex-row z-10">
+
+          <div className="relative flex gap-5 flex-col lg:flex-row">
             {/* Image */}
             <Image
-              className="main-img rounded-xl"
+              className="main-img rounded-xl object-cover"
               src="/about-me.webp"
               alt="Alvaro Placido"
               width={400}

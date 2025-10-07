@@ -12,14 +12,16 @@ import Contact from "./components/Carousel/Sections/contact";
 export default function Home() {
 
   return (
-    <main className="relative px-7.5 lg:px-70 flex flex-col">
+    <main >
         <Header/>
-        <Hero/>
-        <Carousel/>
-        <About/>
-        <Projects/>
-        <Education/>
-        <Contact/> 
+        <div className="relative px-7.5 lg:px-70">
+          <Hero/>
+          <Carousel/>
+          <About/>
+          <Projects/>
+          <Education/>
+          <Contact/> 
+        </div>
     </main>
   );
 }

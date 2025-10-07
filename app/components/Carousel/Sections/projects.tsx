@@ -61,13 +61,13 @@ export default function Projects() {
             <p className="text-neutral-400 my-5">Here’s a selection of my recent work—projects that showcase my skills, creativity, and passion for building practical, high-quality solutions. Each project reflects my focus on clean, efficient code and user-friendly design, whether it’s a sleek web app, a responsive website, or a unique digital experience. Take a look and see how I bring ideas to life in the real world.</p>
 
 
-                    <div className="flex flex-wrap gap-2.5 py-5">
+                    <div className="flex flex-col lg:flex-row flex-wrap gap-2.5 py-5">
                         {projectsData.map((project, index) => (
                         <div
                             key={index}
-                            className="relative backdrop-blur-2xl bg-neutral-900/40 w-[45%] h-[280px] lg:w-[49%] lg:h-[470px] rounded-lg p-4 border border-neutral-800 hover:bg-neutral-900 transition-all cursor-pointer"
+                            className="relative backdrop-blur-2xl bg-neutral-900/40 w-[100%] h-[350px] lg:w-[49%] lg:h-[470px] rounded-lg p-4 border border-neutral-800 hover:bg-neutral-900 transition-all cursor-pointer"
                         >
-                            <div className="relative w-full h-[70%] overflow-hidden rounded-lg mb-2">
+                            <div className="relative w-full h-[50%] lg:h-[70%] overflow-hidden rounded-lg mb-4">
                                 <Image
                                     src={project.thumbnail}
                                     alt={project.title}
@@ -76,8 +76,8 @@ export default function Projects() {
                                 />
                                 {project.tag ?
                                 <div className="absolute bottom-3 right-4 
-                                                bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 
-                                                px-4 py-2 rounded-full text-sm font-semibold shadow-md
+                                                bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-600 
+                                                px-4 py-2 rounded-full text-xs text-white shadow-md
                                                 ">
                                 {project.tag}
                                 </div>
@@ -85,7 +85,7 @@ export default function Projects() {
                             </div>
                             <div className="flex flex-col">
                                     <h3 className="text-neutral-50 lg:text-lg lg:font-bold mb-2.5">{project.title}</h3>
-                                    <p className="text-neutral-400 text-sm hidden lg:block mb-2.5">{project.description}</p>
+                                    <p className="text-neutral-400 text-sm mb-4">{project.description}</p>
                                     <div className="flex gap-2.5">
                                         {project.tech.map((Icon, techIndex) => (
                                         <div key={techIndex} className="text-neutral-400 lg:text-lg">

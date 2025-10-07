@@ -15,11 +15,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.header-items:hover {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-}
-
-
 h1 {
   font-family: 'Stardom'
 }
@@ -60,3 +55,18 @@ h1 {
   scrollbar-color: #27272a #18181b;
 }
 
+.tech-item {
+  position: relative;
+}
+
+.tech-label {
+  position: absolute;
+  top: -15px;
+  transform: translateY(5px);
+  opacity: 0;
+}
+
+.tech-item:hover > .tech-label {
+  opacity: 1;
+  transform: translateX(0px);
+}

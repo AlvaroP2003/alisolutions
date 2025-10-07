@@ -14,36 +14,8 @@ const headerData = [
   { title: 'CONTACT ME', link: 'contact' }
 ];
 
- useGSAP(() => {
-  gsap.registerPlugin(ScrollTrigger)
-
-  const navTween = gsap.timeline({
-    scrollTrigger: {
-      trigger: "header",
-      start: "bottom top",
-      toggleActions: "play none none reverse",
-    },
-  })
-
-  navTween.fromTo(
-    "header",
-    {
-      backgroundColor: "transparent",
-      backdropFilter: "blur(0px)",
-    },
-    {
-      backgroundColor: "##0a0a0a",
-      backdropFilter: "blur(10px)",
-      duration: 0.6,
-      ease: "power1.inOut",
-    }
-  )
-})
-
-
-
     return (
-        <header className="h-[12vh] flex items-center justify-between">
+        <header className="h-[10vh] flex items-center justify-between sticky top-0 px-5 lg:px-10 z-50">
               <Link href='#home' className="hover:scale-105 scale-60 lg:scale-100 transition-all">
                 <Image
                     src="/logo-white.png"
@@ -53,21 +25,19 @@ const headerData = [
                   />
               </Link>
             
-              <div className="gap-5 items-center hidden lg:flex">
-                <nav>
-                    <ul className="flex gap-15">
+                <nav className="relative border border-neutral-800 rounded-full p-1 hidden lg:block backdrop-blur-md bg-neutral-900/50">
+                    <ul className="flex">
                       {headerData.map((item,index) => (
-                        <li key={index}>
-                        <Link  href={`#${item.link}`} className="header-items text-neutral-400 hover:text-white transition-all cursor-pointer">
+                        <li key={index} className="flex">
+                        <Link  href={`#${item.link}`} className="header-items text-sm px-10 py-3 text-neutral-200 hover:bg-neutral-800 hover:text-white cursor-pointer transition-all rounded-full">
                             {item.title}
                         </Link>
                         </li>
                       ))}
                     </ul>
                   </nav>
-              </div>
 
-              <div className="text-neutral-50 block lg:hidden">
+              <div className="text-neutral-50 block lg:hidden bg-neutral-900 border border-neutral-800 rounded-lg">
                 <Hamburger size={20}/>
               </div>
                   

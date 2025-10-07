@@ -66,7 +66,7 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div className="overflow-hidden w-full mb-10">
+    <div className="relative overflow-hidden w-full mb-10">
       <div 
         ref={carouselRef} 
         className="flex gap-10 lg:gap-20"
@@ -74,7 +74,7 @@ export default function Carousel() {
        {[...carouselLogos, ...carouselLogos].map(({ icon: Logo, color }, index) => (
         <div key={index}>
           <Logo 
-            className="my-10 text-3xl lg:text-6xl text-neutral-800 hover:text-[var(--logo-color)] transition-all cursor-pointer" 
+            className="my-10 text-4xl lg:text-6xl text-neutral-800 hover:text-[var(--logo-color)] transition-all cursor-pointer" 
             style={{ '--logo-color': color } as React.CSSProperties} 
           />
         </div>
