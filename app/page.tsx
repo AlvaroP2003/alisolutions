@@ -1,12 +1,12 @@
 'use client'
 
 import Header from "./Components/Header";
-import Hero from "./Components/Sections/hero";
+import Hero from "./Components/Sections/Hero";
 import Carousel from "./Components/Carousel";
 import AboutMe from "./Components/Sections/About";
-import Projects from "./Components/Sections/projects";
-import Education from "./Components/Sections/education";
-import Contact from "./Components/Sections/contact";
+import Projects from "./Components/Sections/Projects";
+import Education from "./Components/Sections/Education";
+import Contact from "./Components/Sections/Contact";
 import { useState } from "react";
 import Overlay from "./Components/Overlay/overlay";
 // Fixed
