@@ -78,7 +78,7 @@ export default function AboutMe() {
 
              <div className="relative w-[400px] lg:w-[600px] overflow-hidden">
                <div
-                  className="flex transition-transform duration-100 ease-in-out"
+                  className="flex transition-transform duration-300 ease-in-out"
                   style={{
                     transform:
                       activeTab === ActiveTab.Info

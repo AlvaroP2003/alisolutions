@@ -19,41 +19,47 @@ import {
   SiNetlify,
   SiVite,
 } from 'react-icons/si';
+import Link from "next/link";
+import { HiArrowRight, HiArrowUpRight  } from 'react-icons/hi';
+
 
 
 export default function Projects() {
 
 
-   const projectsData = [
+  const projectsData = [
     {
         title: 'Cliqserve Business Companions',
         thumbnail: '/cliqserve.png',
         tech: [SiReact, SiTailwindcss, SiExpo, SiSupabase, SiVercel],
         tag: 'coming to playstore',
-        description: 'Helps business owners manage projects, track metrics, and stay connected to their operations anytime, anywhere.'
+        description: 'Helps business owners manage projects, track metrics, and stay connected to their operations anytime, anywhere.',
     },
     {
         title: "Swipen' Snack",
         thumbnail: '/swipensnack.png',
         tech: [SiReact, SiTailwindcss, SiExpo, SiSupabase],
         tag: 'coming to playstore',
-        description: 'Swipe Snack helps two users quickly swipe through food options and decide what to eat together, solving hangry disputes before they start.'
+        description: 'Swipe Snack helps two users quickly swipe through food options and decide what to eat together, solving hangry disputes before they start.',
     },
     {
         title: 'Farmers Market Landing Page',
         thumbnail: '/farmers-market.webp',
-        tech: [  SiHtml5, SiCss3, SiJavascript, SiTypescript, SiNetlify],
+        tech: [SiHtml5, SiCss3, SiJavascript, SiTypescript, SiNetlify],
         tag: '',
-        description: 'A modern website for a local farmers market stall, highlighting the stall’s products, story, and contact information for easy browsing and ordering'
+        description: 'A modern website for a local farmers market stall, highlighting the stall’s products, story, and contact information for easy browsing and ordering',
+        path: 'https://rorbinah-handcrafted.netlify.app/'
     },
     {
         title: 'Real Estate Website',
         thumbnail: '/northsideliving.png',
         tech: [SiReact, SiTailwindcss, SiVercel],
-         tag: '',
-        description: 'A real estate platform showcasing property listings with a sleek, modern design for an intuitive browsing experience.'
+        tag: '',
+        description: 'A real estate platform showcasing property listings with a sleek, modern design for an intuitive browsing experience.',
+        path: 'https://northsideliving.netlify.app/'
     }
-    ];
+];
+
 
 
     return (
@@ -88,14 +94,24 @@ export default function Projects() {
                             <div className="flex flex-col">
                                     <h3 className="text-neutral-50 lg:text-lg lg:font-bold mb-2.5">{project.title}</h3>
                                     <p className="text-neutral-400 text-sm mb-4">{project.description}</p>
-                                    <div className="flex gap-2.5">
-                                        {project.tech.map((Icon, techIndex) => (
-                                        <div key={techIndex} className="text-neutral-400 lg:text-lg">
-                                        <Icon/>
+                                    <div className="flex justify-between">
+                                        <div className="flex gap-2.5">
+                                                {project.tech.map((Icon, techIndex) => (
+                                                <div key={techIndex} className="text-neutral-400 lg:text-lg hover:text-white transition-all hover:scale-110">
+                                                <Icon/>
+                                                </div>
+                                            ))}
                                         </div>
-                                    ))}
+                                        {project.path &&
+                                        <Link 
+                                            href={project.path}
+                                            target="_blank"
+                                            className="flex gap-2.5 items-center text-neutral-400 hover:text-emerald-500 transition-all group">
+                                            <p className="text-sm">Check it Out</p>
+                                            <HiArrowRight size={18} className="-rotate-45"/>
+                                        </Link>
+                                        }
                                     </div>
-                                  
                             </div>
                         </div>
                         ))}

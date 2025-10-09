@@ -1,9 +1,9 @@
 'use client'
 
-import Header from "./Components/Header/header";
+import Header from "./Components/Header";
 import Hero from "./Components/Sections/hero";
-import Carousel from "./Components/Carousel/carousel";
-import AboutMe from "./Components/Sections/About/about";
+import Carousel from "./Components/Carousel";
+import AboutMe from "./Components/Sections/About";
 import Projects from "./Components/Sections/projects";
 import Education from "./Components/Sections/education";
 import Contact from "./Components/Sections/contact";
@@ -17,7 +17,7 @@ export default function Home() {
   const [showOverlay,setShowOverlay] = useState(false)
 
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="relative">
         <Header 
           showOverlay={showOverlay}
           setShowOverlay={setShowOverlay}/>
