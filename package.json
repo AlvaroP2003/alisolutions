@@ -10,7 +10,6 @@
     "format": "biome format --write"
   },
   "dependencies": {
-    "@google/model-viewer": "^4.1.0",
     "@gsap/react": "^2.1.2",
     "@splinetool/react-spline": "^4.1.0",
     "@types/three": "^0.180.0",
@@ -22,8 +21,7 @@
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
     "react-typed": "^2.0.12",
-    "simple-icons": "^15.16.0",
-    "three": "^0.180.0"
+    "simple-icons": "^15.16.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.0",
