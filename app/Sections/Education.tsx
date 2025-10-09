@@ -84,7 +84,7 @@ function HoverTiltCard({ item }: { item: any }) {
 
   return (
     <div
-      className="timeline-items flex flex-col items-center justify-center bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 transition-all w-[250px] h-[300px] rounded cursor-pointer perspective"
+      className="timeline-items flex flex-col items-center justify-center bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 transition-all w-full h-[300px] lg:w-[250px] lg:h-[300px] rounded cursor-pointer perspective"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{

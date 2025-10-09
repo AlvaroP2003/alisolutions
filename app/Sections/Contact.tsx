@@ -34,7 +34,7 @@ export default function Contact() {
       gsap.from(".card", {
         scrollTrigger: {
           trigger: '.card',
-          start: 'top 100%',
+          start: 'top 120%',
           scrub:true,
           toggleActions: "restart none none none",
         },
