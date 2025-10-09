@@ -24,7 +24,6 @@ import {
 export default function Projects() {
 
 
-
    const projectsData = [
     {
         title: 'Cliqserve Business Companions',
