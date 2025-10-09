@@ -1,8 +1,10 @@
 'use client'
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import BasicInfo from "./basic-info"
 import TechStack from "./techs-stack"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/all"
 
 
 enum ActiveTab  {
@@ -12,6 +14,29 @@ enum ActiveTab  {
 
 export default function AboutMe() {
 
+  // GSAP Animations
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+      gsap.from(".image", {
+        scrollTrigger: {
+          trigger: '.image',
+          start: 'top 100%',
+          scrub:true,
+          toggleActions: "restart none none none",
+        },
+        x : -200,
+        rotate:-15,
+        duration: 1,
+      })
+
+  },[])
+
+  
+
+  // --- --- --- 
+
+
   const [activeTab,setActiveTab] = useState<ActiveTab>(ActiveTab.Info)
 
 
@@ -20,7 +45,7 @@ export default function AboutMe() {
 
           <div className="relative flex gap-5 flex-col items-center lg:flex-row">
             
-            <div className="relative w-[95%] lg:w-[400px] h-[600px]">
+            <div className="image relative w-[95%] lg:w-[400px] h-[600px]">
               <Image
                 className="main-img rounded-xl object-cover"
                 src="/about-me.webp"

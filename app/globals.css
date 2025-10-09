@@ -13,11 +13,33 @@ h1 {
   font-family: 'Stardom'
 }
 
-.hero-button {
+
+.hero-button:hover, .social-links:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
   transition: .3s;
 }
 
-.hero-button:hover, .social-links:hover {
-  /* Soft white glow */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+.hero-subtitle {
+  overflow: hidden;
+  width: 54%;
+
+  border-right:  2px solid rgb(255, 255, 255);
+
+  white-space: nowrap;
+
+  animation: 
+    typing 10s steps(19) infinite,
+    cursor .4s step-end infinite alternate;
 }
+
+@keyframes cursor {
+  50% {border-color:  transparent;}
+}
+
+@keyframes typing {
+  0%, 10%   { width: 0; }
+  40%, 50%  { width: 54%; }
+  60%, 70%  { width: 54%; } /* hold typed text for a bit */
+  100%      { width: 0; }
+}
+

@@ -11,19 +11,20 @@ export default function Hero() {
             <div className="h-0 w-[40rem] absolute top-[30%] right-[-5%] shadow-[0_0_900px_20px_#00C48C] -rotate-[30deg]"></div>
 
             <div className="z-10 text-center lg:text-start flex-1">
-              <h1 className="title text-5xl lg:text-8xl text-neutral-50 mb-1">Ali Solutions</h1>
-              <h2 className="subtitle text-xl lg:text-4xl mb-2 text-neutral-200">SOFTWARE DEVELOPER</h2> {/* Animate to swtich between different h2*/}
-              {/* <h2 className="subtitle text-4xl mb-2 text-neutral-300">WEB DESIGNER</h2>
-              <h2 className="subtitle text-4xl mb-2 text-neutral-300">CREATOR</h2>
-              <h2 className="subtitle text-4xl mb-2 text-neutral-300">ENTREPRENEUR</h2> */}
+                <h1 className="title text-6xl lg:text-8xl mb-1 text-transparent bg-clip-text 
+                            bg-gradient-to-b from-neutral-200 via-neutral-50 to-neutral-200
+                            drop-shadow-md">
+                Ali Solutions
+                </h1>
+                    <h2 className="hero-subtitle ext-xl lg:text-4xl mb-2 text-neutral-200">SOFTWARE DEVELOPER.</h2> {/* Animate to swtich between different h2*/}
               <p className="hero-text text-xs lg:text-base text-neutral-400 mb-10">"Talk is cheap. Show me the code." — Linus Torvalds (Creator of Linux)</p>
-                <div className="flex gap-2 mb-4">
-                    <button className="w-[180px] h-[45px] hero-button text-sm hero-button bg-neutral-900 border border-neutral-800 text-neutral-300 rounded-lg shadow-white hover:border-white hover:bg-white hover:shadow-md hover:text-neutral-950 transition-all cursor-pointer">Let's build together</button>
-                    <button className="w-[180px] h-[45px] text-sm border border-neutral-800 text-neutral-300 rounded-lg hover:border-neutral-300 hover:text-white transition-all cursor-pointer">Browse Portfolio</button>
+                <div className="flex flex-col lg:flex-row gap-2 mb-4">
+                    <button className="w-full lg:w-[200px] h-[45px] font-medium hero-button text-sm hero-button bg-white border border-white text-neutral-950 rounded-lg shadow-white hover:border-emerald-500 hover:bg-emerald-500 hover:shadow-md hover:text-white transition-all cursor-pointer">Let's build together</button>
+                    <button className="w-full lg:w-[200px] h-[45px] text-sm border border-neutral-800 text-neutral-300 rounded-lg hover:border-neutral-300 hover:text-white transition-all cursor-pointer">Browse Portfolio</button>
                 </div>
             </div>
 
-            <div className="flex flex-1 justify-center h-fit">
+            <div className="flex flex-1 justify-center items-center h-full">
             </div>
       </section>
 
