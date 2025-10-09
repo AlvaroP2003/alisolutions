@@ -9,6 +9,7 @@ import Education from "./Components/Sections/education";
 import Contact from "./Components/Sections/contact";
 import { useState } from "react";
 import Overlay from "./Components/Overlay/overlay";
+// Fixed
 
 
 export default function Home() {
