@@ -20,7 +20,7 @@ import {
   SiVite,
 } from 'react-icons/si';
 import Link from "next/link";
-import { HiArrowRight, HiArrowUpRight  } from 'react-icons/hi';
+import { HiArrowRight } from 'react-icons/hi';
 
 
 
